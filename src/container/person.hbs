@@ -1,0 +1,81 @@
+<main>
+    {{#with person}}
+        <div>
+            <h1>{{name}}</h1>
+            <h2>{{workExperience.[0].title}}</h2>
+
+            <hr>
+
+            <h2> Main skills </h2>
+            <ul>
+                {{#each workExperience.[0].employees.[0].projects.[0].teams.[0].team_members.[0].skills}}
+                <li>
+                    {{[]}}
+                </li>
+                {{/each}}
+            </ul>
+
+            <hr>
+
+            {{#with workExperience}}
+                <h2>Work Expirience</h2>
+
+                <ul>
+                    <li><p>Company: {{[0].company}} </p></li>
+                    <li><p>Title: {{[0].title}} </p></li>
+                    <li><p>Date of employment: <date> {{[0].startDate}} </date></p></li>
+                    <li><p>Date of dismissal: <date> {{[0].endDate}}</date></p></li>
+                    <li>
+                        <p>
+                            Responsibilities:
+                            {{#each [0].responsibilities}}
+                                <br> {{[]}} 
+                            {{/each}}
+                        </p>
+                    </li>
+                    <li><p>Year founded: <date> {{[0].year_founded}} </date></p></li>
+                    <li><p>Industry: {{[0].industry}}</p></li>
+                    <li>
+                        <h3>Projects: {{[0].employees.[0].projects.[0].name}}</h3>
+
+                        <hr>
+
+                        <h4>Description: {{[0].employees.[0].projects.[0].description}}</h4>
+                        <h4>Status:  {{[0].employees.[0].projects.[0].status}}</h4>
+                    </li>
+                </ul>
+            {{/with}}
+            
+            <hr>
+
+            {{#with education}}
+                <h3>Education</h3>
+
+                <ul>
+                    <li><p>Degree: {{[0].degree}}</p></li>
+                    <li><p>Major: {{[0].major}}</p></li>
+                    <li><p>University: {{[0].university}}</p></li>
+                    <li><p>Graduation year: <date> {{[0].graduationYear}}</date> </p></li>
+                </ul>
+            {{/with}}
+        </div>
+    
+    <hr>
+
+    <footer>
+        <h5>Contact Info</h5>
+
+        <address> 
+            {{address.street}} {{address.city}} {{address.state}} {{address.zip}} {{address.country}}
+            <p>
+                email@email.com
+            </p>
+
+            <p>
+                tel: 1243251342
+            </p>
+        </address>
+
+    </footer>
+    {{/with}}
+</main>

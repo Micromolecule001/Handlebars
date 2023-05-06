@@ -1,0 +1,29 @@
+<main>
+    <section>
+        {{> title title=title.name.[0] big=title.big}}
+        <ul>
+            {{#each names}}
+                <li>
+                    {{this.name}} 
+                    {{#if this.isEnd}} (закiнчив)
+                        {{else}} (ще в процесі) 
+                    {{/if}}
+                </li>
+            {{/each }}
+        </ul>
+    </section>
+
+    <section>
+        {{> title title=title.name.[1] big=false}}
+        <ul>
+            {{#each main.certificates}}
+            <li>
+                {{this.name}}
+                (id: {{this.id}})
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
+
+{{> footer}}

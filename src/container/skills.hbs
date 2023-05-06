@@ -1,0 +1,18 @@
+<main>
+    <section>
+        {{>title title=title.name big=title.big}}
+
+        <ul>
+            {{#each hobbies}}
+                <li>
+                    {{this.name}}
+                    {{#if this.isMain}}
+                        (is favorite)
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
+
+{{> footer}}
