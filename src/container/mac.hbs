@@ -1,0 +1,93 @@
+<main>
+    <div>
+        <h1>{{name}}</h1>
+        <p>{{description}}</p>
+
+        <hr>
+
+        {{#with features}}
+            <div>
+                <h2>Processor</h2>
+                <ul>
+                    {{#each processor}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+                <h2>RAM</h2>
+                <ul>
+                    {{#each memory}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+                <h2>Display</h2>
+                <ul>
+                    {{#each display}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+                <h2>Graphics</h2>
+                <ul>
+                    {{#each graphics}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+                <h2>Ports</h2>
+                <ul>
+                    {{#each ports.[0]}}
+                        <li>{{[]}}</li>
+                    {{/each}}
+                </ul>
+
+                <ul>
+                    {{#each ports.[1]}}
+                        <li>{{[]}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+                <h2>Battery</h2>
+                <ul>
+                    {{#each battery}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+             <hr>
+
+            <div>
+                <h2>Dimensions</h2>
+                <ul>
+                    {{#each dimensions}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+
+            <h1>And other.....</h1>
+        {{/with}}
+    </div>
+</main>
