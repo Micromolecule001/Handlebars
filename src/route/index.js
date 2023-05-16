@@ -1202,6 +1202,37 @@ router.get('/task31', function(req, res) {
                         button: 'Explore',
                         footer: 'Photo by Sime Basioli on Unsplash',
                     },
+                    {
+                        header: 'Travel',
+                        title: 'The Benefits of Traveling',
+                        description: 'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
+                        button: 'Explore',
+                        footer: 'Photo by Sime Basioli on Unsplash',
+                    },
+                    {
+                        header: 'Travel',
+                        title: 'The Benefits of Traveling',
+                        description: 'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
+                        button: 'Explore',
+                        footer: 'Photo by Sime Basioli on Unsplash',
+                    }
+                ],
+            },
+            rest2: {
+                cards: [{
+                        header: 'Cooking',
+                        title: 'The Joy of Cooking',
+                        description: 'Cooking is a creative outlet that can bring people together over delicious food.',
+                        button: 'Learn More',
+                        footer: 'Photo by Brooke Lark on Unsplash',
+                    },
+                    {
+                        header: 'Travel',
+                        title: 'The Benefits of Traveling',
+                        description: 'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
+                        button: 'Explore',
+                        footer: 'Photo by Sime Basioli on Unsplash',
+                    }
                 ],
             },
             proposition: {
