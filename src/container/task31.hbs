@@ -1,0 +1,187 @@
+<main>
+    <div class="row gy-4">
+        <div class="col-2">
+            <button class="btn btn-link"><a href="#"> Link </a></button>
+        </div>
+
+        <div class="col-2">
+            <button class="btn btn-link"><a href="#"> Link </a></button>
+        </div>
+
+        <div class="col-2">
+            <button class="btn btn-link"><a href="#"> Link </a></button>
+        </div>
+
+        <div class="col-6">
+            <button class="btn btn-primary"> Primary </button>
+        </div>
+
+        <hr>
+        
+
+        <div class="col-12">
+            <br>
+            <br>
+            <h1> H1 Heading </h1>
+            <p> Paragraph </p>
+            <button class=" btn btn-primary"> Primary </button>
+        </div>
+
+        <hr>
+
+        <div class="col-12">
+            <br>
+            <br>
+
+            <h2> Rest </h2>
+            {{#with rest}}
+                <div class="row">
+                    {{#each cards}}
+                        <div class="col-6 gy-4">
+                            <div class="card">
+                                <div class="card-header">{{header}}</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{title}}</h5>
+                                    <p>{{description}}</p>
+                                    <button class="btn btn-primary">{{button}}</button>
+                                </div>
+                                <div class="card-footer">{{footer}}</div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            {{/with}}
+        </div>
+
+        <hr>
+
+        <div class="row gy-4">
+            {{#with winner}}
+                <h2> {{title}} </h2>
+
+                <div class="col-12">
+                    <table class="table">
+                        <tr>
+                            {{#each table.head}}
+                                <th>{{[]}}</th>
+                            {{/each}}
+                        </tr>
+                        
+                        {{#each table.user}}
+                            <tr>
+                                <td><strong>{{place}}</strong></td>
+                                <td>{{name}}</td>
+                                <td>{{surname}}</td>
+                                <td>{{nickname}}</td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                </div>
+            {{/with}}
+        </div>
+
+        <hr>
+
+        <div class="row gy-4">
+            {{#with winner}}
+
+                <h2>
+                    {{title}}
+                </h2>
+
+                {{#each table.user}}
+                <div class="col-4">
+                    <div class="card">
+                        <h2 class="card-header"> {{place}} </h2>
+                        <ul class="list-group">
+                            <li class="list-group-item"> Name: {{name}} </li>
+                            <li class="list-group-item"> Surname: {{surname}} </li>
+                            <li class="list-group-item"> Nick: {{nickname}} </li>
+                        </ul>
+                    </div>
+                </div>
+                {{/each}}
+            {{/with}}
+        </div>
+
+        <hr>
+        
+        <div class="row gy-5">
+            {{#with rest}}
+            <h2 class="display-3">Display 3</h2>
+                {{#each cards}}
+                    <div class="col-5">
+                        <div class="card text-bg-secondary">
+                            <div class="card-header">{{header}}</div>
+                            <div class="card-body">
+                                <h2 class="card-title">{{title}}</h2>
+                                <p class="description">{{description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            {{/with}}
+        </div>
+
+        <hr>
+
+        
+        <div class="row gy-5">  
+        {{#with rest2 }}
+            {{#each cards }}
+            <div class="col-5">
+                <div class="card text-center">
+                    <div class="card-header">{{header}}</div>
+                    <div class="card-body">
+                        <h2 class="title">{{title}}<h2>
+                        <p class="decription">{{description}}</p>
+                        <button class="btn btn-primary"> {{button}} </button>
+                    </div>
+                    <div class="card-footer">{{footer}}</div>
+                </div>
+            </div>
+            {{/each}}
+        {{/with}}
+        </div>
+
+        <hr>
+
+        <h2 class="display-2">Display 2</h2>
+
+        <div class="row gy-5">
+            {{#with rest2}}
+                {{#each cards}}
+                    <div class="col-5">
+                        <div class="card text-bg-warning">
+                            <div class="card-header"> {{header}} </div>
+                            <div class="card-body">
+                                <h2 class="card-title"> {{title}} </h2>
+                                <p class="description"> {{description}} </p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            {{/with}}
+        </div> 
+
+        <hr>
+
+        <h5> H5 Heading </h5>
+
+        <div class="row gy-2">
+            <div class="col-3"> <button class="btn btn-link"> <a href="#"> Link </a> </button> </div>
+            <div class="col-3"> <button class="btn btn-outline-dark"> Dark </button> </div>
+            <div class="col-3"> <button class="btn btn-outline-info"> Info </button> </div>
+        </div>
+        <div class="row gy-2">
+            <div class="col-3"> <button class="btn btn-link"> <a href="#"> Link </a> </button> </div>
+            <div class="col-3"> <button class="btn btn-outline-dark"> Dark </button> </div>
+            <div class="col-3"> <button class="btn btn-outline-info"> Info </button> </div>
+        </div>
+        <div class="row gy-2">
+            <div class="col-3"> <button class="btn btn-link"> <a href="#"> Link </a> </button> </div>
+            <div class="col-3"> <button class="btn btn-outline-dark"> Dark </button> </div>
+            <div class="col-3"> <button class="btn btn-outline-info"> Info </button> </div>
+        </div>
+    </div>
+</main>
