@@ -1,0 +1,103 @@
+<main>
+    <div class="row gy-4">
+        <div class="col-2">
+            <button class="btn btn-link"><a href="#"> Link </a></button>
+        </div>
+
+        <div class="col-2">
+            <button class="btn btn-link"><a href="#"> Link </a></button>
+        </div>
+
+        <div class="col-2">
+            <button class="btn btn-link"><a href="#"> Link </a></button>
+        </div>
+
+        <div class="col-6">
+            <button class="btn btn-primary"> Primary </button>
+        </div>
+
+        <hr>
+        
+
+        <div class="col-12">
+            <br>
+            <br>
+            <h1> H1 Heading </h1>
+            <p> Paragraph </p>
+            <button class=" btn btn-primary"> Primary </button>
+        </div>
+
+        <hr>
+
+        <div class="col-12">
+            <br>
+            <br>
+
+            <section class="row">
+                {{#with city}} 
+                    <div>
+                        <h2>{{title}}</h2>
+                    </div>
+                    <div class="row gy-4">
+                        {{#each cards}}
+                            <div class="col-5">
+                                <div class="card">
+                                    {{#with picture}}
+                                        <img class="card-img-top" src="{{src}}" alt="{{alt}}">
+                                    {{/with}}
+                                    <div class="card-body">
+                                        <h4 class="card-title">{{title}}</h4>
+                                        <p>{{description}}</p>
+                                        {{#with button}}
+                                            <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+                                        {{/with}}
+                                    </div>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                {{/with}}
+            </section>   
+            
+            <div class="row">
+                <div class="card col-5 g-3">
+                    <div class="card-header"> <img src="#" alt="image cap" class="card-img-top"> </div> 
+                    <div class="card-body">
+                        <h6 class="card-title"> Card title </h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed laoreet mi, non vulputate libero. Suspendisse et purus mattis, feugiat velit et, fermentum augue. Morbi convallis elementum mi, sed condimentum.</p>
+                        <button class="btn btn-primary"> Go somewhere </button>
+                    </div>
+                </div>
+
+                <div class="card col-5 g-3">
+                    <div class="card-header"> <img src="#" alt="image cap" class="card-img-top"> </div> 
+                    <div class="card-body">
+                        <h6 class="card-title"> Card title </h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed laoreet mi, non vulputate libero. Suspendisse et purus mattis, feugiat velit et, fermentum augue. Morbi convallis elementum mi, sed condimentum.</p>
+                        <button class="btn btn-primary"> Go somewhere </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card col-5 g-3">
+                    <div class="card-header"> <img src="#" alt="image cap" class="card-img-top"> </div> 
+                    <div class="card-body">
+                        <h6 class="card-title"> Card title </h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed laoreet mi, non vulputate libero. Suspendisse et purus mattis, feugiat velit et, fermentum augue. Morbi convallis elementum mi, sed condimentum.</p>
+                        <button class="btn btn-primary"> Go somewhere </button>
+                    </div>
+                </div>
+
+                <div class="card col-5 g-3">
+                    <div class="card-header"> <img src="#" alt="image cap" class="card-img-top"> </div> 
+                    <div class="card-body">
+                        <h6 class="card-title"> Card title </h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed laoreet mi, non vulputate libero. Suspendisse et purus mattis, feugiat velit et, fermentum augue. Morbi convallis elementum mi, sed condimentum.</p>
+                        <button class="btn btn-primary"> Go somewhere </button>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</main>
