@@ -1034,11 +1034,11 @@ router.get('/task21', function(req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/task41', function(req, res) {
+router.get('/shophome', function(req, res) {
     // res.render генерує нам HTML сторінку
 
     //            ↙ cюди вводимо назву файлу з сontainer
-    res.render('task41', {
+    res.render('shophome', {
             layout: 'basic',
             navigation: {
                 links: [{
@@ -1293,11 +1293,11 @@ router.get('/task41', function(req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/task51', function(req, res) {
+router.get('/shoporder', function(req, res) {
     // res.render генерує нам HTML сторінку
 
     //            ↙ cюди вводимо назву файлу з сontainer
-    res.render('task51', {
+    res.render('shoporder', {
             layout: 'basic',
             navigation: {
                 links: [{
@@ -1645,11 +1645,11 @@ router.get('/task51', function(req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/task61', function(req, res) {
+router.get('/shopcart', function(req, res) {
     // res.render генерує нам HTML сторінку
 
     //            ↙ cюди вводимо назву файлу з сontainer
-    res.render('task61', {
+    res.render('shopcart', {
             layout: 'basic',
             navigation: {
                 links: [{
@@ -1877,11 +1877,11 @@ router.get('/task61', function(req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/task62', function(req, res) {
+router.get('/shopprofile', function(req, res) {
     // res.render генерує нам HTML сторінку
 
     //            ↙ cюди вводимо назву файлу з сontainer
-    res.render('task62', {
+    res.render('shopprofile', {
             layout: 'basic',
             navigation: {
                 links: [{
@@ -2162,11 +2162,11 @@ router.get('/task62', function(req, res) {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/task71', function(req, res) {
+router.get('/shopreview', function(req, res) {
     // res.render генерує нам HTML сторінку
 
     //            ↙ cюди вводимо назву файлу з сontainer
-    res.render('task71', {
+    res.render('shopreview', {
             layout: 'basic',
             navigation: {
                 links: [{
