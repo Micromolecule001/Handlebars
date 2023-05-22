@@ -13,8 +13,7 @@ router.get('/', function(req, res) {
 
     //             ↙ cюди вводимо назву файлу з сontainer
     res.render('index', {
-            salary: '600 $ в місяц',
-            address: "Золотые ворота 2А",
+            layout: 'basic'
         })
         //                  ↑↑ сюди вводимо JSON дані
 })
