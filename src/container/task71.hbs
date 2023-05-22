@@ -57,7 +57,7 @@
                 {{#with feedbackBlock}}
                     <h2>{{title}}</h2>
 
-                    <div class="buttons p-3">
+                    <div class="p-3">
                         {{#each buttons}}
                             <button class="btn {{#if isWarning}} btn-warning {{else}} {{#if isSuccess}} btn-success {{else}} btn-danger {{/if}} {{/if}}"> {{text}} </button>
                         {{/each}}
@@ -80,7 +80,7 @@
                         <h2>{{price}}</h2>
 
                         <p>{{#if inMarket}} Є в наявності {{/if}}</p>
-                        <div class="buttons">
+                        <div>
                             {{#each buttons}}
                                 <button class="btn {{#if isPrimary}} btn-primary {{else}} {{#if isSecondary}} btn-secondary {{else}} btn-danger {{/if}} {{/if}}"> {{text}} </button>
                             {{/each}}
