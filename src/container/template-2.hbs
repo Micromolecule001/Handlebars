@@ -1,0 +1,136 @@
+<div class="page">
+    <div class="page-content">
+         <div class="page-block">
+            <header class="header row g-0">
+                <div class="header-logo col-3">
+                    <span class="badge text-bg-primary"> B </span>
+                </div>
+
+                <nav class="header-nav col-9">
+                    <div class="header-nav-right">
+                        {{>nav-list list=header}}
+                    </div>
+                </nav>
+            </header>
+            {{> divider}}
+        </div>
+
+        <div class="page-second-block">
+            {{#with hero}}
+                <div class="card">
+                    <h2 class="main-h2">{{title}}</h2>
+                    <p>{{text}}</p>
+                    {{#with button}}
+                    <div class="button">
+                        <a href="{{url}}"><button class="btn btn-primary">{{text}}</button></a>
+                    </div>
+                    {{/with}}
+                </div>
+            {{/with}}
+
+            {{#with preview}}
+                <div class="row">
+                    {{#each []}}
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="c-header">
+                                    <p class="date">{{date}} 
+                                    {{#each category}}
+                                        <span id="{{id}}" class="badge"> {{text}}</span>
+                                    {{/each}}
+                                    </p>
+                                </div>
+
+                                <div class="c-body">
+                                    <h2 class="title">{{title}}</h2>
+                                    <p class="text">{{text}}</p>
+                                    <a href="#" class="link"> Continue reading </a>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            {{/with}}
+        </div>
+    </div>
+
+    <div class="page-third-block">
+        {{#with news}}
+        <div class="left">
+            <p>List of posts</p>
+        </div>
+
+        <div class="right">
+            {{#each categories}}
+                <button class="btn btn-outline-secondary"> {{text}} </button>
+            {{/each}}
+        </div>
+        {{/with}}
+        {{> divider}}
+        
+        <div class="row">
+            <div class="col-8">
+                <div class="row">
+                    {{#each news}}
+                        <div class="col-12">
+                            <h2 class="title">{{title}}</h2>
+                            <p class="date">{{date}} by <span class="name"> {{author}} </span></p>
+                            <p class="text">{{description}}</p>
+                            <a href="#" class="link"> Continue reading </a>
+                        </div>
+                        {{> divider}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="about">
+                    <h2 class="about-title">About</h2>
+                    <p class="about-text">Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum</p>
+                </div>
+
+                <div class="archive">
+                    {{#with archive}}
+                        <h2 class="archive-title">Archive</h2>
+                        {{#each []}}
+                            <div class="archive-link">
+                                <a href="{{url}}"> {{text}} </a>
+                            </div>
+                        {{/each}}
+                    {{/with}}
+                </div>
+
+                <div class="social">
+                    <h2 class="social-title">Social</h2>
+                    {{#each social}}
+                        <div class="social-link">
+                            <a href="{{url}}"> {{text}} </a>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+
+   <footer class="row">
+        {{> divider}}
+        <div class="col-3">
+            <div class="badge-wrapper">
+                <span class="badge text-bg-primary"> B </span>
+            </div>
+            <p class="copyright">Copyright 2013</p>
+        </div>
+
+        {{#each footer}}
+            <div class="col-3">
+                <p class="footer-title">{{title}}</p>
+                <ul>
+                    {{#each links}}
+                        <a class="footer-link" href="url">{{text}}</a>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </footer>
+</div>
