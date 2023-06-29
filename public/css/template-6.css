@@ -174,7 +174,9 @@ hr {
 /* three name panels */
 
 .name-panel {
+    position: relative;
     margin-top: 80px;
+    margin-bottom: 80px;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -227,6 +229,31 @@ hr {
     letter-spacing: 0em;
     text-align: left;
 
+}
+
+.badge-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -10px;
+    left: 940px;
+    width: 90px;
+    height: 53px;
+    background-color: #FF7347;
+    border-radius: 70px;
+    transform: rotate(30deg);
+}
+
+.badges {
+    position: absolute;
+    top: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 
 /* footer */
