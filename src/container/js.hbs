@@ -1,0 +1,82 @@
+<main>
+    <div>
+        <h3>{{name}}</h3>
+    </div>
+
+    <hr>
+
+    <div>
+        <p> <b> JS --> </b> {{description}} </p>
+        <p>
+            {{#with history}}
+                Founded by founder <b> {{founder}} </b> in {{year}}y
+            {{/with}}
+        </p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Types</h2>
+        <ul>
+            {{#each types}}
+                <li>{{[]}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Syntax</h2>
+        <ul>
+            {{#each syntax}}
+                <li>{{[]}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Features</h2>
+        <ul>
+            {{#each features}}
+                <li>{{[]}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Libraries</h2>
+        <ul>
+            {{#each libraries}}
+                <li>{{[]}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Tools</h2>
+        <ul>
+            {{#each tools}}
+                <li>{{[]}}</li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <hr>
+    
+    <div>
+        <h2>Communitys</h2>
+        <ul>
+            {{#each community}}
+                <li>{{name}}({{type}})</li>
+            {{/each}}
+        </ul>
+    </div>
+</main>

@@ -1,0 +1,70 @@
+<main>
+    <div>
+        <h1>{{make}} {{model}} {{year}} ({{color}})</h1>
+
+        <hr>
+
+        {{#with features}}
+            {{#with interior}}
+            <h1>Interior</h1>
+                <div>
+                    <h2> Seats </h2>
+                    {{#with seats}}
+                        <p>Material: {{material}}</p>
+                        <p>Color: {{color}}</p>
+                        <p>Heated: {{heated}}</p>
+                        <p>Ventilated: {{ventilated}}</p>
+                    {{/with}}
+                </div>
+
+                <hr>
+
+                <div>
+                    <h2> Dashboard </h2>
+                    {{#with dashboard}}
+                        <p>Material: {{material}}</p>
+                        <p>Color: {{color}}</p>
+                        <p>Display: 
+                            {{#with display}}
+                                <p>Type: {{type}}</p>
+                                <p>Size: {{size}}</p>
+                                <p>Resolution: {{resolution}}</p>
+                                <p>Touchscreen: {{touchscreeen}}</p>
+                            {{/with}}
+                        </p>
+                    {{/with}}
+                </div>
+
+                <hr>
+
+                <div>
+                    <h2> Audio </h2>
+                    {{#with audio}}
+                        <p>System: {{system}}</p>
+                        <p>Speackers: {{speakers}}</p>
+                        <p>Subwoofer: {{subwoofer}}</p>
+                        <p>Bluetooth: {{bluetooth}}</p>
+                        <p>USB: {{USB}}</p>
+                    {{/with}}
+                </div>
+
+            {{/with}}
+
+            <hr>
+
+            {{#with exterior}}
+            <h1>Exterior</h1>
+                <div>
+                    <h2> Wheels </h2>
+                    {{#with wheels}}
+                        <p>size: {{size}}</p>
+                        <p>type: {{type}}</p>
+                        <p>color: {{color}}</p>
+                    {{/with}}
+                </div>
+
+            <h1>And other......</h1>
+            {{/with}}
+        {{/with}}
+    </div>
+</main>
