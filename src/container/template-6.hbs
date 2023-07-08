@@ -1,0 +1,113 @@
+<main>
+
+	<!-- header part -->
+    
+    <header class="nav-bar">
+        <div class="container-logo"> 
+            <span class="logo"> B </span> 
+        </div>
+
+        <div class="container-links">
+        {{#each header}}
+            <a href="{{link}}" class="header-link"> {{text}} </a>
+        {{/each}}
+        </div>
+    </header>
+
+
+    <!-- main content -->
+	
+	<div class="main-content">
+		<div class="main-title">
+			{{#with info}}
+				<h2 class="title"> {{title}} </h2>
+				<p class="description">{{description}}</p>
+			{{/with}}
+		</div>
+		<div class="form-div card">
+			{{#with form}}
+				{{#each inputs}}
+					<input type="text" class="{{type}}" id="{{id}}" name="{{name}}" placeholder="{{placeholder}}"> </input> 
+				{{/each}}
+				
+				{{#with checkbox}}
+					<label>
+						<input type="checkbox" name="{{name}}"> {{label}}
+						<br>
+					</label>
+				{{/with}}
+
+				<button class="btn btn-primary"> {{button}} </button>
+
+				<hr>
+
+				<p class="info"> {{info}}</p>
+			{{/with}}
+		</div>
+	</div>
+	
+	<!-- div with shadow -->
+
+	<div class="shadow-content">
+		{{#with updates}}
+			<div class="title-wrapper">
+				<h2 class="title"> {{title}} </h2>
+			</div>
+
+			{{#each list}}
+				<div class="comment-wrapper">
+					<div class="x32x32">
+						<img src="https://picsum.photos/32/32" alt="32x32">
+					</div>
+					<div class="text">
+						<p class="username">@{{nickname}}</p>
+						<p class="comment">{{description}}</p>
+					</div>
+				</div>
+			{{/each}}
+			<a href="{{show_all.url}}" class="show-all">{{show_all.text}}</a>
+		{{/with}}
+	</div>
+
+	<!-- three name panels -->
+
+	<div class="name-panel">
+		{{#with expirience}}
+			<div class="title-wrapper">
+				<h2 class="title"> {{title}} </h2>
+				<div class="badge-wrapper">
+					<p class="badges">hot!</p>
+				</div>
+			</div>
+			<div class="panel-wrapper">
+				{{#each list}}
+					<div class="panel">
+						<h2 class="name-title">{{name}}</h2>
+						<p class="details">{{details}}</p>
+					</div>
+				{{/each}}
+			</div>
+		{{/with}}
+	</div>
+
+    <!-- footer part -->
+
+    <footer>
+        <div>
+            <div class="footer-container-logo"> 
+                <span class="logo"> B </span>  
+            </div>
+            <p>© 2023</p>
+        </div>
+        {{#each footer}}
+            <div class="footer-col">
+                <h2 class="footer-title">
+                    {{title}}
+                </h2>
+                {{#each links}}
+                    <a href="{{url}}" class="footer-link">{{text}}</a>
+                {{/each}}
+            </div>
+        {{/each}}
+    </footer>
+</main>

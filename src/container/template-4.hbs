@@ -1,0 +1,90 @@
+<main>
+
+    <!-- header part -->
+    
+    <header class="nav-bar">
+        <div class="container-logo"> 
+            <span class="logo"> B </span> 
+        </div>
+
+        <div class="container-links">
+        {{#each header}}
+            <a href="{{link}}" class="header-link"> {{text}} </a>
+        {{/each}}
+        </div>
+    </header>
+
+
+    <!-- main content -->
+
+    {{#with main}}
+    <div class="main">
+        <div class="img-container">
+            <img src="{{image}}" alt="500x500 image">
+        </div>
+        <div class="title-text-container">
+            <h1 class="title">{{heading}}</h1>
+            <p class="description">{{description}}</p>
+            <div class="button-container">
+                <button class="btn btn-secondary">{{button}}</button>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+
+
+    <!-- three cards -->
+    
+    <div class="three-cards-container">
+    {{#each featured}}
+        <div class="noborder-card">
+            <div class="photo">
+                <img src="{{photo}}" alt="64x64 photo">
+            </div>
+            <h2 class="card-title"> {{heading}} </h2>
+            <div class="info-container">
+                <p class="info"> {{info}} </p>
+            </div>
+            <a href="{{linkUrl}}" class="card-link">{{linkText}}</a>
+        </div>
+    {{/each}}
+    </div>
+
+
+    <!-- buttons actions -->
+
+    <div class="actions">
+        {{#each actions}}
+            <div class="heading-button">
+                <h2>{{heading}}</h2>
+                <a href="{{url}}" class="btn-link">
+                    <button class="btn btn-light">
+                        {{text}}
+                    </button>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+
+
+    <!-- footer part -->
+
+    <footer>
+        <div>
+            <div class="footer-container-logo"> 
+                <span class="logo"> B </span>  
+            </div>
+            <p>© 2023</p>
+        </div>
+        {{#each footer}}
+            <div class="footer-col">
+                <h2 class="footer-title">
+                    {{title}}
+                </h2>
+                {{#each links}}
+                    <a href="{{url}}" class="footer-link">{{text}}</a>
+                {{/each}}
+            </div>
+        {{/each}}
+    </footer>
+</main>

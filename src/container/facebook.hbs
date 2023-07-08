@@ -1,0 +1,93 @@
+<main>
+   {{#with users.[0]}}
+    <div>
+        <h1>
+            {{name}}
+        </h1>
+        <p>Gender: {{gender}}, Age: {{age}}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Friends</h2>
+        {{#with friends}}
+            {{#with [0]}}
+                <h3>{{name}}</h3>
+                <p>Gender: {{gender}}, Age: {{age}} <br>
+                Mutual friends: <b> {{mutual_friends.[0].name}} ... </b> <a href="#">[more]</a></p>
+            {{/with}}
+
+            {{#with [1]}}
+                <h3>{{name}}</h3>
+                <p>Gender: {{gender}}, Age: {{age}} <br>
+                Mutual friends: <b> {{mutual_friends.[0].name}} </b></p>
+            {{/with}}
+        {{/with}}
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Groups</h2>
+        {{#with groups}}
+            {{#with [0]}}
+                <h3>{{name}}</h3>
+                <p>{{description}} <br>
+                Members: <b> {{members.[0].name}} ... </b> <a href="#">[more]</a></p>
+            {{/with}}
+
+            {{#with [1]}}
+                <h3>{{name}}</h3>
+                <p>{{description}} <br>
+                Members: <b> {{members.[0].name}} ... </b> <a href="#">[more]</a></p>
+            {{/with}}
+        {{/with}}
+    </div>
+   {{/with}}
+
+   <hr>
+
+   {{#with users.[1]}}
+    <div>
+        <h1>
+            {{name}}
+        </h1>
+        <p>Gender: {{gender}}, Age: {{age}}</p>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Friends</h2>
+        {{#with friends}}
+            {{#with [0]}}
+                <h3>{{name}}</h3>
+                <p>Gender: {{gender}}, Age: {{age}} <br>
+                Mutual friends: <b> {{mutual_friends.[0].name}} ... </b> <a href="#">[more]</a></p>
+            {{/with}}
+        {{/with}}
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Groups</h2>
+        {{#with friends.[0]}}
+            {{#with groups}}
+                {{#with [0]}}
+                    <h3>{{name}}</h3>
+                    <p>{{description}} <br>
+                    Members: <b> {{members.[0].name}} ... </b> <a href="#">[more]</a></p>
+                {{/with}}
+
+                {{#with [1]}}
+                    <h3>{{name}}</h3>
+                    <p>{{description}} <br>
+                    Members: <b> {{members.[0].name}} ... </b> <a href="#">[more]</a></p>
+                {{/with}}
+            {{/with}}
+        {{/with}}
+    </div>
+   {{/with}}
+</main>

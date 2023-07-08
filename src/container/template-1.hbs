@@ -1,0 +1,74 @@
+<div class="page">
+    <div class="page-content">
+        <div class="page-block">
+            <header class="header row g-0">
+                <div class="header-logo col-3">
+                    <span class="badge text-bg-primary"> B </span>
+                </div>
+
+                <nav class="header-nav col-9">
+                    <div class="header-nav-right">
+                        {{>nav-list list=header}}
+                    </div>
+                </nav>
+            </header>
+            {{> divider}}
+        </div>
+
+        <div class="second-page-block">
+            <div class="row">
+                <div class="col-12">
+                    {{#with hero}}
+                        <h1 class="main-title">{{title}}</h1>
+                        <div class="main-text-block">
+                            <p>{{text}}</p>
+                        </div>
+                    {{/with}}
+                </div>       
+            <div>
+            
+            <div class="row">
+                {{#each plans}}
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-header-title">{{name}}</h2>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="price"><span class="price-span">${{price}} </span>/mo</h2>
+                                {{#each features}}
+                                    <p class="feature">{{this}}</p>
+                                {{/each}}
+                                <button class="btn {{#if isOutline}} btn-outline-primary {{else}} btn-primary {{/if}}">{{button}}</button>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}} 
+            </div>
+        </div>
+
+
+        <div class="page-footer">
+            {{> divider}}
+            <footer class="row">
+                <div class="col-3">
+                    <div class="badge-wrapper">
+                        <span class="badge text-bg-primary"> B </span>
+                    </div>
+                    <p class="copyright">Copyright 2013</p>
+                </div>
+
+                {{#each footer}}
+                    <div class="col-3">
+                        <p class="footer-title">{{title}}</p>
+                        <ul>
+                            {{#each links}}
+                                <a class="footer-link" href="url">{{text}}</a>
+                            {{/each}}
+                        </ul>
+                    </div>
+                {{/each}}
+            </footer>
+        </div>
+    </div>
+</div>

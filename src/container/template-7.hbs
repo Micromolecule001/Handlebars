@@ -1,0 +1,97 @@
+<div class="page">
+    <div class="content">
+        <header>
+            {{#with header}}
+                <div class="row-1">
+                    <div class="logo-wrapper">
+                            {{brandName}}
+                    </div>
+
+                    <div class="link-wrapper">
+                        {{#each links}}
+                            <a href="{{url}}">{{text}}</a>
+                        {{/each}}
+                    </div>
+                </div>
+
+                <div class="row-2">
+                    <div class="ad-wrapper">
+                        <p class="ad-p">
+                            <span class="ad"> Ad </span>
+                            {{ad.text}}:
+                            <span><a class="ad-link" href="{{ad.url}}">{{ad.url}}</a></span>
+                        </p>
+                    </div>
+
+                    <div class="user-count-wrapper">
+                        Users online:
+                        {{userOnline}}
+                    </div>
+                </div>
+            {{/with}}
+        </header>
+
+
+        <!-- Title -->
+
+        <div class="title-div">
+            {{#with hero}}
+                <div class="content-wrapper">
+                    <h1>{{title}}</h1>
+                    <p class="description">{{description}}</p>
+                    <a href="{{button.url}}"><button class="title-button">{{button.text}}</button></a>
+                </div>
+            {{/with}}
+        </div>
+
+        <!-- Dscription -->
+
+        <div class="description-div">
+            {{#with about}}
+                <h2>{{heading}}</h2>
+                <p class="info">{{info}}</p>
+            {{/with}}
+        </div>
+
+
+        <!-- Cards -->
+
+        <div class="cards-div">
+            <div class="heading-wrapper">
+                <p> Our Articles </p>
+                <button class="view-all"> View All </button>
+            </div>
+           
+           <div class="cards-wrapper">
+                {{#each articles}}
+                    <div class="card-nb">
+                        <img src="{{photo}}" alt="400x200">
+                        {{#if isNew}}
+                            <p class="new">NEW</p>
+                        {{/if}}
+                        <h2>{{name}}</h2>
+                        <p>{{description}}</p>
+                        <button class="card-btn">Read All</button>
+                    </div>
+                {{/each}}
+           </div>
+
+
+            <!-- footer -->
+
+            <footer>
+                {{#with footer}}
+                <div class="links-wrapper">
+                    {{#each pages}}
+                        <a href="{{path}}">{{name}}</a>
+                    {{/each}}
+                </div>
+
+                <div class="copyright-wrapper">
+                    {{copyright}}
+                </div>
+                {{/with}}
+            </footer>
+        </div>
+    </div>
+</div>
